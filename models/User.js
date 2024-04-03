@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const { Thoughts } = require('./Thoughts');
 
 // Schema to create User model
-const userModel = new Schema(
+const userSchema = new Schema(
     {
         username: {
             type: String,
@@ -24,8 +24,8 @@ const userModel = new Schema(
                 message: 'Email validation failed'
             }
         },
-        thoughts: [Thoughts_id],
-        friends: [friends_id],
+        thoughts: [Thoughts.id],
+        friends: [friends.id],
     },
     {
         toJSON: {
@@ -49,6 +49,6 @@ userModel
     });
 
 // Initialize our User model
-const User = model('user', userModel);
+const User = model('user', userSchema);
 
 module.exports = User;
