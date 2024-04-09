@@ -24,8 +24,8 @@ const userSchema = new Schema(
                 message: 'Email validation failed'
             }
         },
-        thoughts: [Thoughts.id],
-        friends: [friends.id],
+        thoughts: [Thoughts_id],
+        friends: [User_id],
     },
     {
         toJSON: {
@@ -48,7 +48,6 @@ userModel
         this.set({ first, last });
     });
 
-// Initialize our User model
 const User = model('user', userSchema);
 
 module.exports = User;

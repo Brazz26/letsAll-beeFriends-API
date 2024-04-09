@@ -1,7 +1,7 @@
 {
   "name": "letAll-beeFriends-Api",
-  "version": "1.0.1",
-  "description": "Challenge 18",
+  "version": "1.0.0",
+  "description": "Reverse engineer developer activity for CRUD methods in Mongoose",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

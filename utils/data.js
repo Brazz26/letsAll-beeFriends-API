@@ -36,6 +36,7 @@ const possibleReactions = [
     }
 ];
 
+const User = [];
 const thoughts = getRandomThoughts(5);
 
 await User.collection.insertMany(users);

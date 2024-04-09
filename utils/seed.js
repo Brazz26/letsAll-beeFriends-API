@@ -5,10 +5,10 @@ connection.on('error', (err) => err);
 
 connection.once('open', async () => {
   console.log('You are now connected');
-  let applicationCheck = await connection.db.listCollections({ name: 'applications' }).toArray();
+  let thoughtsCheck = await connection.db.listCollections({ name: 'thoughts' }).toArray();
 
-  if (applicationCheck.length) {
-    await connection.dropCollection('applications');
+  if (thoughtsCheck.length) {
+    await connection.dropCollection('thoughts');
   }
 
   let userCheck = await connection.db.listCollections({
@@ -37,7 +37,7 @@ connection.once('open', async () => {
   await Thoughts.collection.insertMany(thoughts);
 
   console.table(users);
-  console.table(applications);
+  console.table(thoughts);
   console.info('Database Now Seeded! 🌱');
   process.exit(0);
 });
