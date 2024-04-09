@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose')
-const { User } = require('./User')
+const { Reaction } = require('./Reaction')
 
 
 const thoughtsSchema = new Schema(
@@ -22,7 +22,7 @@ const thoughtsSchema = new Schema(
             required: true,
             ref: {User, username_id}
         }, 
-        reactions:[]
+        reactions:[Reaction]
     }
 );
 thoughtsSchema.virtual('getResponses')
